@@ -1,0 +1,107 @@
+footer {
+  background: url(../../images/contact-bg.png) no-repeat center top / cover;
+  padding: 100px 0;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  h2 {
+    color: white !important;
+
+    &:before {
+      background-color: white !important;
+    }
+  }
+
+  input {
+    height: 30px;
+    width: 260px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  textarea {
+    color: $font-navbar-color;
+    padding: 10px;
+  }
+}
+
+.send-btn {
+  background-color: white;
+  border: none;
+  width: 100px;
+  height: 36px;
+  text-align: center;
+  font-family: "Asap-Medium";
+  font-weight: 800;
+  font-size: 16px;
+  color: $font-navbar-color;
+}
+
+.line {
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: white;
+}
+
+.social-container {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 20%;
+}
+
+.social {
+  display: flex;
+   img {
+     margin-right: 20px;
+   }
+}
+
+.social-container {
+
+  h2 {
+    font-size: 16px;
+    font-family: "Asap-Regular";
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 1039px) {
+  .form-input {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  textarea {
+    width: 90%;
+  }
+
+  .social-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+
+    h2 {
+      margin-top: 20px;
+    }
+  }
+}

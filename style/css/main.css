@@ -1,0 +1,544 @@
+@charset "UTF-8";
+.menu-btn {
+  z-index: 10;
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  transition: .2s;
+}
+
+.menu-btn span::before {
+  /*Поднимаем псевдоэлемент на 5px */
+  transform: translateY(-5px);
+}
+
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+
+/* крестик*/
+.menu-btn-active span {
+  height: 0;
+}
+
+.menu-btn-active span::before {
+  transform: rotate(45deg);
+}
+
+.menu-btn-active span::after {
+  transform: rotate(-45deg);
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../../fonts/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../../fonts/Lato-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Asap-Regular';
+  src: url("../../fonts/Asap-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Asap-Medium';
+  src: url("../../fonts/Asap-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Asap-Italic';
+  src: url("../../fonts/Asap-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Asap-Bold';
+  src: url("../../fonts/Asap-Bold.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  color: #4d4d4d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.title-h2 {
+  font-family: "Lato-Light";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.title-h4 {
+  font-family: "Lato-Regular";
+  font-weight: 800;
+  font-size: 8px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  align-items: center;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+}
+.navbar ul li {
+  margin-right: 3rem;
+}
+.navbar ul li a {
+  font-family: "Lato-Regular";
+  font-size: 16px;
+  color: #4d4d4d;
+}
+
+#btn-show {
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+header {
+  background: url(../../images/header-bg.png) no-repeat center top/cover;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-h1 {
+  font-family: "Asap-Medium";
+  color: #4d4d4d;
+  font-size: 90px;
+}
+
+.header-h3 {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "Asap-Medium";
+  font-size: 22px;
+}
+
+.header-title-container {
+  max-width: 1366px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 10px;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  display: block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  font-family: "Asap-Medium";
+  font-size: 16px;
+  align-self: flex-start;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.btn-white {
+  background-color: white;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-tr {
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 970px) {
+  .navbar-second {
+    margin-top: 0 !important;
+    justify-content: flex-start;
+  }
+  .navbar-second ul {
+    margin-top: 20px;
+  }
+
+  .navbar {
+    margin-top: 10px;
+    flex-direction: column;
+    height: 100px;
+    align-items: center;
+  }
+  .navbar ul li:last-child {
+    margin-right: 0;
+  }
+  .navbar ul li {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 595px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  #dropdown-menu {
+    position: absolute;
+    top: 80px;
+    background-color: white;
+    width: 100%;
+  }
+  #dropdown-menu li {
+    width: 100%;
+  }
+  #dropdown-menu li a {
+    display: block;
+    padding: 10px;
+  }
+
+  #btn-show {
+    display: inline-block !important;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+footer {
+  background: url(../../images/contact-bg.png) no-repeat center top/cover;
+  padding: 100px 0;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+footer h2 {
+  color: white !important;
+}
+footer h2:before {
+  background-color: white !important;
+}
+footer input {
+  height: 30px;
+  width: 260px;
+}
+footer input:not(:last-child) {
+  margin-right: 20px;
+}
+footer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+footer textarea {
+  color: #4d4d4d;
+  padding: 10px;
+}
+
+.send-btn {
+  background-color: white;
+  border: none;
+  width: 100px;
+  height: 36px;
+  text-align: center;
+  font-family: "Asap-Medium";
+  font-weight: 800;
+  font-size: 16px;
+  color: #4d4d4d;
+}
+
+.line {
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: white;
+}
+
+.social-container {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 20%;
+}
+
+.social {
+  display: flex;
+}
+.social img {
+  margin-right: 20px;
+}
+
+.social-container h2 {
+  font-size: 16px;
+  font-family: "Asap-Regular";
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1039px) {
+  .form-input {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+  }
+  .form-input input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 90%;
+  }
+
+  .social-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .social-container h2 {
+    margin-top: 20px;
+  }
+}
+.main {
+  max-width: 1366px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.text-container {
+  width: 500px;
+  margin-right: 50px;
+}
+
+.main-h2 {
+  font-family: "Asap-Bold";
+  font-size: 46px;
+  color: #4d4d4d;
+  width: 300px;
+  position: relative;
+  text-transform: uppercase;
+}
+.main-h2:before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #4d4d4d;
+  position: absolute;
+  left: 3px;
+  top: -10px;
+}
+
+.main-p {
+  color: #4d4d4d;
+  font-size: 16px;
+  font-family: "Asap-Medium";
+  margin-bottom: 30px;
+}
+
+.card-container {
+  justify-content: space-between;
+}
+
+.services {
+  align-items: center;
+  margin-top: 80px;
+  background-color: #f6f6f6;
+  padding: 50px 0;
+}
+
+.text-center-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center:before {
+  text-align: center;
+  left: 120px;
+  top: -10px;
+}
+
+.services-container {
+  display: flex;
+  max-width: 1366px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills img {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+.portfolio {
+  background-color: #f6f6f6;
+  padding: 40px 0;
+}
+
+.portfolio-container .btn {
+  margin-top: 20px;
+  align-self: center !important;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.text-inner-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.text-inner-container h2 {
+  font-family: "Asap-Medium";
+  font-size: 30px;
+  color: black;
+}
+.text-inner-container h5 {
+  font-family: "Asap-Italic";
+  font-size: 12px;
+  color: black;
+}
+.text-inner-container p {
+  margin-top: 10px;
+  font-family: "Asap-Medium";
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.testimonials {
+  max-width: 800px;
+  padding-top: 40px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.testimonials-container {
+  padding: 40px;
+  border: 1px solid black;
+}
+
+.adv-item {
+  align-items: center;
+}
+
+.advantages {
+  margin-top: 100px;
+  justify-content: space-around;
+  padding: 40px 0;
+  background-color: #f6f6f6;
+}
+.advantages h2 {
+  margin-top: 20px;
+  font-family: "Asap-Medium";
+  font-size: 30px;
+  color: #4d4d4d;
+}
+.advantages p {
+  text-transform: uppercase;
+  font-family: "Asap-Medium";
+  font-size: 22px;
+  color: #4d4d4d;
+}
+
+@media screen and (max-width: 1039px) {
+  .card-container {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-container img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .text-container {
+    width: 70%;
+    margin-right: 0;
+  }
+
+  .services-container {
+    flex-direction: column !important;
+    justify-content: center;
+  }
+  .services-container:not(:first-child) {
+    margin-top: 0;
+  }
+  .services-container .card {
+    margin-top: 40px;
+  }
+
+  .advantages {
+    flex-direction: column;
+  }
+  .advantages .adv-item {
+    margin-top: 40px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

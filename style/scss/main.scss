@@ -1,0 +1,219 @@
+@import "header";
+@import "footer";
+
+.main {
+  max-width: $max-width;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.text-container {
+  width: 500px;
+  margin-right: 50px;
+}
+
+.main-h2 {
+  font-family: "Asap-Bold";
+  font-size: 46px;
+  color: $font-navbar-color;
+  width: 300px;
+  position: relative;
+  text-transform: uppercase;
+
+  &:before {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: $font-navbar-color;
+    position: absolute;
+    left: 3px;
+    top: -10px;
+  }
+}
+
+.main-p {
+  color: $font-navbar-color;
+  font-size: 16px;
+  font-family: "Asap-Medium";
+  margin-bottom: 30px;
+}
+
+.card-container {
+  justify-content: space-between;
+}
+
+.services {
+  align-items: center;
+  margin-top: 80px;
+  background-color: #f6f6f6;
+  padding: 50px 0;
+}
+
+.text-center-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center:before {
+  text-align: center;
+  left: 120px;
+  top: -10px;
+}
+
+.services-container {
+  display: flex;
+  max-width: $max-width;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// SKILLS /////////////////////
+
+.skills {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin-top: 40px;
+    max-width: 100%;
+  }
+}
+
+//// SKILLS END /////////////
+
+.portfolio {
+  background-color: #f6f6f6;
+  padding: 40px 0;
+}
+
+.portfolio-container {
+
+  .btn {
+    margin-top: 20px;
+    align-self: center !important;
+  }
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.text-inner-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+
+  h2 {
+    font-family: "Asap-Medium";
+    font-size: 30px;
+    color: black;
+  }
+
+  h5 {
+    font-family: "Asap-Italic";
+    font-size: 12px;
+    color: black;
+  }
+
+  p {
+    margin-top: 10px;
+    font-family: "Asap-Medium";
+    font-size: 16px;
+    color: rgba(0,0,0,0.5);
+  }
+}
+
+.testimonials {
+  max-width: 800px;
+  padding-top: 40px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.testimonials-container {
+  padding: 40px;
+  border: 1px solid black;
+}
+
+.adv-item {
+  align-items: center;
+}
+
+.advantages {
+  margin-top: 100px;
+  justify-content: space-around;
+  padding: 40px 0;
+  background-color: #f6f6f6;
+
+  h2 {
+    margin-top: 20px;
+    font-family: "Asap-Medium";
+    font-size: 30px;
+    color: $font-navbar-color;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-family: "Asap-Medium";
+    font-size: 22px;
+    color: $font-navbar-color;
+  }
+}
+
+@media screen and (max-width: 1039px){
+  .card-container {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  .text-container {
+    width: 70%;
+    margin-right: 0;
+  }
+
+  .services-container {
+    flex-direction: column !important;
+    justify-content: center;
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+
+    .card {
+      margin-top: 40px;
+    }
+  }
+
+  .advantages {
+    flex-direction: column;
+
+    .adv-item {
+      margin-top: 40px;
+    }
+  }
+}
