@@ -5,5 +5,5 @@ As result we have ready html responsive layout.
 #### How can you check out work ? <br>
 1. Download repository as ZIP archive
 2. Unzip downloaded repository
-3. Open file "index.html" vie browser
+3. Open file "index.html" via browser
  
